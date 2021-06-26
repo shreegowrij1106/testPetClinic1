@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<testsuite errors="0" failures="0" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="3" time="13.655">
+<testcase classname="Find all Owners" name="Find all owners" time="6.341">
+<system-out><![CDATA[Given I have opened the browser.............................................passed
+And I am on the home page...................................................passed
+And I open find owners......................................................passed
+When I click find owners....................................................passed
+Then I should see the headings "Owners" on the page.........................passed
+]]></system-out>
+</testcase>
+<testcase classname="Find all Owners" name="Find random owner" time="3.875">
+<system-out><![CDATA[Given I have opened the browser.............................................passed
+And I am on the home page...................................................passed
+And I open find owners......................................................passed
+When I search owner "xyz"...................................................passed
+Then I get a message "has not been found"...................................passed
+]]></system-out>
+</testcase>
+<testcase classname="Find all Owners" name="Validate logo and home page menu exists" time="2.937">
+<system-out><![CDATA[Given I have opened the browser.............................................passed
+And I am on the home page...................................................passed
+Then I can view PetClinic logo and menu items "Home","Find owners","Veterinarians","Error".passed
+]]></system-out>
+</testcase>
+</testsuite>

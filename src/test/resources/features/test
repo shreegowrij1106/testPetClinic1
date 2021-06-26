@@ -1,0 +1,112 @@
+io.cucumber.junit.UndefinedStepException: The step "I open Find owners page" is undefined. You can implement it using the snippet(s) below:
+
+@When("I open Find owners page")
+public void i_open_find_owners_page() {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+
+@Then("I enter details as {string},{string},{string},{string},{string}")
+public void i_enter_details_as(String string, String string2, String string3, String string4, String string5) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+
+# Scenario: Login and Vets
+ #  Given I have opened the browser
+  # And I am on the home page
+   #When  I open veterinarians page
+   Then I search for text "Veterinarians"
+   
+  Scenario: Login and check owner based on last name
+    Given I have opened the browser
+    And I am on the home page
+  	When I search owner "Franklin"
+    Then I get owner "Franklin" Informations
+
+    
+    io.cucumber.junit.UndefinedStepException: The step "The details are "Test Name1","Test Name2","Address","Bengaluru","123456789"" is undefined. You can implement it using the snippet(s) below:
+
+ Scenario: Login and Add new Owner
+    Given I have opened the browser
+    And I am on the home page
+  	When I open Find owners page
+    Then I search for text "Add Owner"
+    And I submit details as "Test Name1","Test Name3","Address","Bengaluru","123456789"
+    
+    Scenario: Confirm new Owner
+  	Given I have opened the browser
+    And I am on the home page
+  	When I search owner "Test Name3"
+    Then I get owner "Test Name3" Informations
+    And The details are "Test Name1","Test Name3","Address","Bengaluru","123456789" 
+===========================================================================================================
+
+
+io.cucumber.junit.UndefinedStepException: The step "I open Find owners" is undefined. You can implement it using the snippet(s) below:
+
+@Given("I open Find owners")
+public void i_open_find_owners() {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+
+
+Some other steps were also undefined:
+
+@When("I click find owners")
+public void i_click_find_owners() {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@Then("I should see the headings owner on the page")
+public void i_should_see_the_headings_owner_on_the_page() {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+
+
+
+ @SmokeTest
+ Scenario: Login and Vets
+  When  I open veterinarians page
+  Then I search for text "Veterinarians"
+  
+  @RegressionTest 
+  Scenario Outline: Login and check owner based on last name    
+  	When I search owner "<ownerName>"
+    Then I get owner "<ownerName>" Informations
+    
+    Examples:
+    |ownerName|
+    |Franklin|
+    |Name3|
+    |ABCDFEF|
+ 
+   Scenario: Login and Add new Owner    
+  	And I open Find owners and Add owner page
+    When I submit details as "Test5","Name5","Address","Bengaluru","123456789"
+    Then The details are "Test5","Name5","Address","Bengaluru","123456789"
+===============
+
+io.cucumber.junit.UndefinedStepException: The step "I get a message "has not been found"" is undefined. You can implement it using the snippet(s) below:
+
+@Then("I get a message {string}")
+public void i_get_a_message(String string) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+
+io.cucumber.junit.UndefinedStepException: The step "I can view PetClinic logo and menu items "Home","Find owners","Veterinarians","Error"" is undefined. You can implement it using the snippet(s) below:
+
+@Then("I can view PetClinic logo and menu items {string},{string},{string},{string}")
+public void i_can_view_pet_clinic_logo_and_menu_items(String string, String string2, String string3, String string4) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+
+
+
+
+
+    
